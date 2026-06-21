@@ -1,0 +1,51 @@
+\begin{figure}[htbp]
+\centering
+\resizebox{\linewidth}{!}{%
+\begin{tikzpicture}[
+  every node/.style={font=\small\sffamily},
+  box/.style={rectangle, rounded corners=2pt, draw=black!55, very thick, fill=elsB3!45,
+              text width=3.3cm, minimum height=1.0cm, align=center, inner sep=3pt},
+  cogb/.style={rectangle, rounded corners=2pt, draw=black!55, very thick, fill=elsC1!55,
+              text width=3.3cm, minimum height=1.0cm, align=center, inner sep=3pt},
+  repb/.style={rectangle, rounded corners=2pt, draw=black!55, very thick, fill=elsC2!50,
+              text width=3.3cm, minimum height=1.0cm, align=center, inner sep=3pt},
+  sensor/.style={circle, fill=elsC2, draw=black!50, inner sep=1.7pt},
+  arr/.style={-{Stealth[length=2.6mm]}, very thick, elsB1},
+  fb/.style={-{Stealth[length=2.6mm]}, very thick, densely dashed, elsC2}
+]
+  % ---- physical frame (left) ----
+  \coordinate (bl) at (0,0.4);   \coordinate (br) at (3,0.4);
+  \coordinate (tl) at (0,3.4);   \coordinate (tr) at (3,3.4);
+  \draw[line width=1.2pt] (bl) -- (tl) -- (tr) -- (br);
+  \draw[line width=1.2pt] (bl) -- (br);
+  \draw[line width=1.2pt, elsB1] (bl) -- (tr);
+  \foreach \p in {bl,br} {
+     \draw[line width=1pt] ($(\p)+(-0.22,-0.3)$) -- (\p) -- ($(\p)+(0.22,-0.3)$);
+     \draw[line width=1pt] ($(\p)+(-0.32,-0.3)$) -- ($(\p)+(0.32,-0.3)$);
+  }
+  \node[circle, draw=black!70, fill=elsC1!70, inner sep=3pt] (mot) at (1.5,3.4) {};
+  \fill[black] ($(mot)+(0.12,0.07)$) circle (1.3pt);
+  \node[font=\footnotesize, anchor=south] at (1.5,3.72) {rotating-unbalance exciter};
+  \node[sensor] at (0,1.9){};  \node[sensor] at (3,1.9){};  \node[sensor] at (1.5,1.9){};
+  \node[sensor] at (0,3.4){};  \node[sensor] at (3,3.4){};
+  \node[font=\footnotesize, anchor=north] at (1.5,-0.05) {Instrumented SHS braced frame};
+  \node[sensor] (leg) at (0.15,-0.75){};
+  \node[font=\footnotesize, anchor=west] at (0.33,-0.75) {sensor node};
+  % ---- vertical digital pipeline (right) ----
+  \node[box]  (daq)  at (7.4, 3.6) {\textbf{Central DAQ}\\ \footnotesize synchronised streams};
+  \node[box]  (twin) at (7.4, 1.9) {\textbf{Digital twin (FEM)}\\ \footnotesize modal / harmonic baseline};
+  \node[box]  (dev)  at (7.4, 0.2) {\textbf{Deviation indicators}\\ \footnotesize residuals, statistics};
+  \node[cogb] (cog)  at (7.4,-1.5) {\textbf{Cognition layer}\\ \footnotesize ML diagnosis, prognosis};
+  \node[repb] (rep)  at (7.4,-3.2) {\textbf{Autonomous integrity report}};
+  \draw[arr] (tr) -- (daq);
+  \draw[arr] (daq) -- (twin);
+  \draw[arr] (twin) -- (dev);
+  \draw[arr] (dev) -- (cog);
+  \draw[arr] (cog) -- (rep);
+  \draw[fb] (rep.east) -- ++(1.7,0) |- (twin.east);
+  \node[rotate=-90, anchor=south, font=\footnotesize\sffamily, elsC2] at (9.65,-0.65)
+        {baseline update and control};
+\end{tikzpicture}}
+\caption{Schematic of the planned demonstrator and its digital counterpart. The instrumented square-hollow-section (SHS) braced frame is excited by a variable-speed rotating-unbalance device; synchronised sensor streams feed a central data-acquisition system and the finite-element-based digital twin, whose predictions are compared with measurement to produce deviation indicators. The cognition layer converts these into an autonomous integrity report, which in turn updates the healthy baseline, closing the perceive--process--interpret--report loop.}
+\label{fig:testbed}
+\end{figure}

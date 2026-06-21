@@ -1,0 +1,22 @@
+% Body-only graphical abstract, \input by main.tex frontmatter.
+\begin{tikzpicture}[
+  every node/.style={font=\sffamily},
+  stage/.style={rectangle, rounded corners=4pt, draw=black!55, very thick,
+                text width=3.1cm, minimum height=2.0cm, align=center, inner sep=5pt},
+  arr/.style={-{Stealth[length=4mm]}, line width=1.3pt, elsB1}
+]
+  \node[stage, fill=elsB4] (phys)
+        {\textbf{Physical}\\[3pt]\footnotesize Passive steel frame\\ distributed sensors\\ (strain, vibration, temp.)};
+  \node[stage, fill=elsB3!70, right=1.3cm of phys] (twin)
+        {\textbf{Digital twin}\\[3pt]\footnotesize FEM baseline\\ real-time deviation\\ detection};
+  \node[stage, fill=elsC1!65, right=1.3cm of twin] (cog)
+        {\textbf{Cognition (AI)}\\[3pt]\footnotesize novelty detection\\ classification\\ prognosis};
+  \node[stage, fill=elsC2!55, right=1.3cm of cog] (out)
+        {\textbf{Self-aware output}\\[3pt]\footnotesize autonomous\\ integrity report\\ predictive maintenance};
+  \draw[arr] (phys) -- (twin);
+  \draw[arr] (twin) -- (cog);
+  \draw[arr] (cog) -- (out);
+  \draw[-{Stealth[length=4mm]}, line width=1.3pt, densely dashed, elsC2]
+        (out.south) to[out=270,in=270]
+        node[below, font=\footnotesize\sffamily, elsC2]{updates the digital twin} (twin.south);
+\end{tikzpicture}

@@ -1,0 +1,138 @@
+%% =====================================================================
+%% From Passive Members to Self-Aware Steel Structures
+%% Target journal: Automation in Construction (Elsevier, ISSN 0926-5805)
+%% Class: elsarticle (numbered references)
+%% Compile: latexmk -pdf -interaction=nonstopmode main.tex
+%% =====================================================================
+\documentclass[preprint,12pt]{elsarticle}
+
+\usepackage{amssymb,amsmath}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{positioning,arrows.meta,shapes.geometric,shapes.misc,calc,fit,backgrounds,decorations.pathmorphing}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepgfplotslibrary{groupplots}
+
+%% Elsevier-friendly colour palette (used by the TikZ/pgfplots figures)
+\definecolor{elsB1}{HTML}{08306B}
+\definecolor{elsB2}{HTML}{2171B5}
+\definecolor{elsB3}{HTML}{6BAED6}
+\definecolor{elsB4}{HTML}{C6DBEF}
+\definecolor{elsC1}{HTML}{66C2A5}
+\definecolor{elsC2}{HTML}{FC8D62}
+
+%% For double line spacing during review, use the [review] class option.
+%% \usepackage{lineno}\linenumbers
+
+\journal{Automation in Construction}
+
+\begin{document}
+
+\begin{frontmatter}
+
+\title{From Passive Members to Self-Aware Steel Structures: A Digital-Twin and
+Machine-Learning Framework for Structural Cognition and Autonomous Health Monitoring}
+
+\author[inst1]{[First Author]\corref{cor1}}
+\ead{first.author@institution.edu}
+
+\author[inst1]{[Second Author]}
+
+\cortext[cor1]{Corresponding author.}
+
+\affiliation[inst1]{organization={[Department]},
+            addressline={[Street address]},
+            city={[City]},
+            postcode={[Postcode]},
+            state={[State]},
+            country={[Country]}}
+
+\begin{abstract}
+Steel structures are conventionally treated as passive load-resisting members
+whose integrity is verified by periodic inspection. Structural health monitoring
+(SHM) added continuous measurement, yet many deployments still stop at data
+acquisition, leaving interpretation to offline analysis. This paper proposes a
+conceptual framework and reference architecture for the Self-Aware Steel
+Structure, which perceives, processes, interprets and autonomously reports its
+own mechanical state through a permanent link to a continuously updated digital
+twin. We introduce the paradigm of Structural Cognition and an operational
+six-level scale (L0--L5) of structural self-awareness mapped onto the Rytter
+damage hierarchy. A five-layer architecture couples distributed multi-sensor
+acquisition, a finite-element digital twin, a machine-learning cognition layer
+(unsupervised novelty detection with autoencoders, supervised classification, and
+LSTM temporal modelling) and a governed decision layer. A braced
+square-hollow-section frame under rotating-unbalance excitation is specified as
+the validation testbed, advancing cognitive digital twins and autonomous
+predictive maintenance of steel infrastructure.
+\end{abstract}
+
+\begin{graphicalabstract}
+\centering
+\resizebox{0.96\linewidth}{!}{\input{graphical-abstract-body}}
+\end{graphicalabstract}
+
+\begin{highlights}
+\item Self-Aware Steel Structure paradigm shifts members from passive to cognitive.
+\item Structural Cognition lets a structure interpret and report its own state.
+\item Five-layer architecture couples sensing, FEM digital twin and learning.
+\item Supervised and unsupervised AI detect stiffness loss and bolt loosening.
+\item SHS braced-frame testbed enables autonomous predictive maintenance of steel.
+\end{highlights}
+
+\begin{keyword}
+Self-aware structures \sep Structural cognition \sep Digital twin \sep
+Structural health monitoring \sep Machine learning \sep
+Autonomous damage detection \sep Steel structures
+\end{keyword}
+
+\end{frontmatter}
+
+%% ===================== Main text =====================
+\input{secoes/01-introduction}
+\input{tabelas/tab1-pillars}
+\input{figs/fig-architecture}
+
+\input{secoes/02-background}
+\input{figs/fig-frf}
+\input{tabelas/tab-positioning}
+
+\input{secoes/03-paradigm}
+\input{tabelas/tab2-conv-vs-aware}
+\input{figs/fig-levels}
+\input{tabelas/tab3-levels}
+
+\input{secoes/04-architecture}
+\input{tabelas/tab4-sensors}
+
+\input{secoes/05-methodology}
+\input{figs/fig-testbed}
+\input{tabelas/tab6-params}
+
+\input{secoes/06-ml-strategy}
+\input{figs/fig-mlpipeline}
+\input{tabelas/tab5-mlmethods}
+
+\input{secoes/07-discussion}
+
+\input{secoes/08-conclusions}
+
+%% ===================== Declarations =====================
+\section*{CRediT authorship contribution statement}
+\textbf{[First Author]:} Conceptualization, Methodology, Writing -- original draft.
+\textbf{[Second Author]:} Conceptualization, Supervision, Writing -- review \& editing.
+
+\section*{Declaration of competing interest}
+The authors declare that they have no known competing financial interests or
+personal relationships that could have appeared to influence the work reported in
+this paper.
+
+%% ===================== Bibliography =====================
+\bibliographystyle{elsarticle-num}
+\bibliography{references}
+
+\end{document}

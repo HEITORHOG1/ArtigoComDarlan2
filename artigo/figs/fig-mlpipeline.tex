@@ -1,0 +1,31 @@
+\begin{figure}[htbp]
+\centering
+\resizebox{\linewidth}{!}{%
+\begin{tikzpicture}[
+  every node/.style={font=\small\sffamily},
+  io/.style={rectangle, rounded corners=2pt, draw=black!55, very thick, fill=elsB3!50,
+             text width=2.7cm, minimum height=1.1cm, align=center, inner sep=3pt},
+  br/.style={rectangle, rounded corners=2pt, draw=black!55, very thick, fill=elsC1!55,
+             text width=3.0cm, minimum height=1.1cm, align=center, inner sep=3pt},
+  arr/.style={-{Stealth[length=2.6mm]}, very thick, elsB1}
+]
+  \node[io] (feat) {Damage-sensitive features\\ \footnotesize modal, strain, twin residuals};
+  \node[io, right=1.1cm of feat] (norm) {Environmental and operational normalisation};
+  \node[br, above right=1.5cm and 1.2cm of norm] (uns) {Unsupervised novelty\\ \footnotesize autoencoder, outlier analysis};
+  \node[br, right=1.2cm of norm] (sup) {Supervised classification\\ \footnotesize Random Forest, SVM, ANN};
+  \node[br, below right=1.5cm and 1.2cm of norm] (tmp) {Temporal model\\ \footnotesize LSTM network};
+  \node[io, right=5.8cm of sup] (out) {Diagnosis and prognosis\\ \footnotesize integrity assessment};
+  \draw[arr] (feat) -- (norm);
+  \draw[arr] (norm) -- (uns);
+  \draw[arr] (norm) -- (sup);
+  \draw[arr] (norm) -- (tmp);
+  \draw[arr] (uns) -- (out);
+  \draw[arr] (sup) -- (out);
+  \draw[arr] (tmp) -- (out);
+  \node[font=\footnotesize\itshape, elsB1, anchor=south] at ($(uns.north)+(0,0.08)$) {existence, location};
+  \node[font=\footnotesize\itshape, elsB1, anchor=north] at ($(tmp.south)+(0,-0.08)$) {prognosis};
+  \node[font=\footnotesize\itshape, elsB1, anchor=south] at ($(out.north)+(0,0.08)$) {type, severity};
+\end{tikzpicture}}
+\caption{Machine-learning pipeline of the cognition layer. Damage-sensitive features are normalised against operational and environmental variability, then routed to an unsupervised branch (novelty detection), a supervised branch (damage classification) and a temporal branch (progressive-damage tracking). Each branch is annotated with the Rytter stages it addresses; the technique-to-stage mapping is summarised in Table~\ref{tab:mlmethods}.}
+\label{fig:mlpipeline}
+\end{figure}

@@ -1,0 +1,162 @@
+\begin{thebibliography}{10}
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+\expandafter\ifx\csname href\endcsname\relax
+  \def\href#1#2{#2} \def\path#1{#1}\fi
+
+\bibitem{avci2021review}
+O.~Avci, O.~Abdeljaber, S.~Kiranyaz, M.~Hussein, M.~Gabbouj, D.~J. Inman, A
+  review of vibration-based damage detection in civil structures: From
+  traditional methods to machine learning and deep learning applications,
+  Mechanical Systems and Signal Processing 147 (2021) 107077.
+\newblock \href {https://doi.org/10.1016/j.ymssp.2020.107077}
+  {\path{doi:10.1016/j.ymssp.2020.107077}}.
+
+\bibitem{farrar2013shm}
+C.~R. Farrar, K.~Worden, Structural Health Monitoring: A Machine Learning
+  Perspective, John Wiley \& Sons, Chichester, UK, 2013.
+
+\bibitem{farrar2007introduction}
+C.~R. Farrar, K.~Worden, An introduction to structural health monitoring,
+  Philosophical Transactions of the Royal Society A: Mathematical, Physical and
+  Engineering Sciences 365~(1851) (2007) 303--315.
+\newblock \href {https://doi.org/10.1098/rsta.2006.1928}
+  {\path{doi:10.1098/rsta.2006.1928}}.
+
+\bibitem{chopra2017dynamics}
+A.~K. Chopra, Dynamics of Structures: Theory and Applications to Earthquake
+  Engineering, 5th Edition, Pearson, Hoboken, NJ, USA, 2017.
+
+\bibitem{he2022integrated}
+Z.~He, W.~Li, H.~Salehi, H.~Zhang, H.~Zhou, P.~Jiao, Integrated structural
+  health monitoring in bridge engineering, Automation in Construction 136
+  (2022) 104168.
+\newblock \href {https://doi.org/10.1016/j.autcon.2022.104168}
+  {\path{doi:10.1016/j.autcon.2022.104168}}.
+
+\bibitem{cook2002fea}
+R.~D. Cook, D.~S. Malkus, M.~E. Plesha, R.~J. Witt, Concepts and Applications
+  of Finite Element Analysis, 4th Edition, John Wiley \& Sons, New York, USA,
+  2002.
+
+\bibitem{naser2023ml}
+M.~Z. Naser, Machine Learning for Civil and Environmental Engineers, John Wiley
+  \& Sons, Hoboken, NJ, USA, 2023.
+
+\bibitem{brunton2019data}
+S.~L. Brunton, J.~N. Kutz, Data-Driven Science and Engineering: Machine
+  Learning, Dynamical Systems, and Control, Cambridge University Press,
+  Cambridge, UK, 2019.
+
+\bibitem{wangcha2022unsupervised}
+Z.~Wang, Y.-J. Cha, Unsupervised machine and deep learning methods for
+  structural damage detection: A comparative study, Engineering Reports (2022).
+\newblock \href {https://doi.org/10.1002/eng2.12551}
+  {\path{doi:10.1002/eng2.12551}}.
+
+\bibitem{chiachio2022structural}
+M.~Chiachio, M.~Megia, J.~Chiachio, J.~Fernandez, M.~L. Jalon, Structural
+  digital twin framework: Formulation and technology integration, Automation in
+  Construction 140 (2022) 104333.
+\newblock \href {https://doi.org/10.1016/j.autcon.2022.104333}
+  {\path{doi:10.1016/j.autcon.2022.104333}}.
+
+\bibitem{li2025edge}
+Y.~Li, Q.~Kong, B.~Xiong, F.~Chi, Y.~Qu, C.~Wang, Edge-fog-cloud-based digital
+  twin network for autonomous and distributed structural health monitoring of a
+  mega dam cluster, Automation in Construction 172 (2025) 106050.
+\newblock \href {https://doi.org/10.1016/j.autcon.2025.106050}
+  {\path{doi:10.1016/j.autcon.2025.106050}}.
+
+\bibitem{zou2026deep}
+Z.~Zou, M.~Wang, B.~Song, J.~He, S.~Yang, Deep learning and digital twin driven
+  structural health monitoring of masonry structures: Progress and challenges,
+  Automation in Construction 188 (2026) 106993.
+\newblock \href {https://doi.org/10.1016/j.autcon.2026.106993}
+  {\path{doi:10.1016/j.autcon.2026.106993}}.
+
+\bibitem{mariniello2025enhancing}
+G.~Mariniello, C.~Gragnaniello, D.~Asprone, Enhancing structural health
+  monitoring data management and damage detection in digital twins with
+  blockchain and smart contracts, Automation in Construction 180 (2025) 106558.
+\newblock \href {https://doi.org/10.1016/j.autcon.2025.106558}
+  {\path{doi:10.1016/j.autcon.2025.106558}}.
+
+\bibitem{sohn2003statistical}
+H.~Sohn, D.~W. Allen, K.~Worden, C.~R. Farrar, Statistical damage
+  classification using sequential probability ratio tests, Structural Health
+  Monitoring 2~(1) (2003) 57--74.
+\newblock \href {https://doi.org/10.1177/147592103031113}
+  {\path{doi:10.1177/147592103031113}}.
+
+\bibitem{figueiredo2010machine}
+E.~Figueiredo, G.~Park, C.~R. Farrar, K.~Worden, J.~Figueiras, Machine learning
+  algorithms for damage detection under operational and environmental
+  variability, Structural Health Monitoring 10~(6) (2011) 559--572.
+\newblock \href {https://doi.org/10.1177/1475921710388971}
+  {\path{doi:10.1177/1475921710388971}}.
+
+\bibitem{tan2020sensorplacement}
+Y.~Tan, L.~Zhang, Computational methodologies for optimal sensor placement in
+  structural health monitoring: A review, Structural Health Monitoring 19~(4)
+  (2020) 1287--1308.
+\newblock \href {https://doi.org/10.1177/1475921719877579}
+  {\path{doi:10.1177/1475921719877579}}.
+
+\bibitem{hassani2023sensorplacement}
+S.~Hassani, U.~Dackermann, A systematic review of optimization algorithms for
+  structural health monitoring and optimal sensor placement, Sensors 23~(6)
+  (2023) 3293.
+\newblock \href {https://doi.org/10.3390/s23063293}
+  {\path{doi:10.3390/s23063293}}.
+
+\bibitem{karaaslan2021attention}
+E.~Karaaslan, U.~Bagci, F.~N. Catbas, Attention-guided analysis of
+  infrastructure damage with semi-supervised deep learning, Automation in
+  Construction 125 (2021) 103634.
+\newblock \href {https://doi.org/10.1016/j.autcon.2021.103634}
+  {\path{doi:10.1016/j.autcon.2021.103634}}.
+
+\bibitem{yu2024steelbridge}
+T.~Yu, Q.~Tang, S.~Vinayaka, Identifying structural properties of a steel
+  railway bridge for structural health monitoring using laser doppler
+  vibrometry, Automation in Construction 160 (2024) 105320.
+\newblock \href {https://doi.org/10.1016/j.autcon.2024.105320}
+  {\path{doi:10.1016/j.autcon.2024.105320}}.
+
+\bibitem{karyofyllas2025dtml}
+G.~Karyofyllas, D.~Giagopoulos, X.~Jia, C.~Papadimitriou, A digital twin-driven
+  machine learning framework for structural condition monitoring using
+  multi-datasets, Structural Health Monitoring (2025).
+\newblock \href {https://doi.org/10.1177/14759217251324110}
+  {\path{doi:10.1177/14759217251324110}}.
+
+\bibitem{zhang2021physicsguided}
+Z.~Zhang, C.~Sun, Structural damage identification via physics-guided machine
+  learning: a methodology integrating pattern recognition with finite element
+  model updating, Structural Health Monitoring 20~(4) (2021) 1675--1688.
+\newblock \href {https://doi.org/10.1177/1475921720927488}
+  {\path{doi:10.1177/1475921720927488}}.
+
+\bibitem{parisi2022steel}
+F.~Parisi, A.~Mangini, M.~Fanti, J.~M. Adam, Automated location of steel truss
+  bridge damage using machine learning and raw strain sensor data, Automation
+  in Construction 138 (2022) 104249.
+\newblock \href {https://doi.org/10.1016/j.autcon.2022.104249}
+  {\path{doi:10.1016/j.autcon.2022.104249}}.
+
+\bibitem{wangsu2023steelbearing}
+W.~Wang, C.~Su, Deep learning-based detection and condition classification of
+  bridge steel bearings, Automation in Construction 156 (2023) 105085.
+\newblock \href {https://doi.org/10.1016/j.autcon.2023.105085}
+  {\path{doi:10.1016/j.autcon.2023.105085}}.
+
+\bibitem{arya2021roaddamage}
+D.~Arya, H.~Maeda, S.~K. Ghosh, D.~Toshniwal, A.~Mraz, T.~Kashiyama,
+  Y.~Sekimoto, Deep learning-based road damage detection and classification for
+  multiple countries, Automation in Construction 132 (2021) 103935.
+\newblock \href {https://doi.org/10.1016/j.autcon.2021.103935}
+  {\path{doi:10.1016/j.autcon.2021.103935}}.
+
+\end{thebibliography}

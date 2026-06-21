@@ -1,0 +1,17 @@
+\begin{table}[htbp]
+\centering
+\caption{Levels of structural self-awareness and their mapping to the Rytter damage-identification hierarchy.}
+\label{tab:levels}
+\begin{tabularx}{\linewidth}{@{}c X p{2.5cm} X@{}}
+\toprule
+\textbf{Level} & \textbf{Capability} & \textbf{Rytter stage} & \textbf{Enabling technique} \\
+\midrule
+L0 & Passive member; condition established by inspection & --             & Visual inspection \\
+L1 & Acquires and transmits raw signals                 & --             & Distributed sensor network \\
+L2 & Extracts damage-sensitive features                 & (precondition) & SVD/PCA, modal identification, autoencoder latents \\
+L3 & Detects, locates and classifies anomalies          & Existence, location, type, severity & Novelty detection; Random Forest, SVM, ANN \\
+L4 & Estimates remaining useful life                    & Prognosis & Predictive digital twin; LSTM networks \\
+L5 & Communicates and acts on its self-assessment       & --             & Decision logic; condition-based maintenance \\
+\bottomrule
+\end{tabularx}
+\end{table}

@@ -1,0 +1,26 @@
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+  width=\linewidth, height=6.2cm,
+  xlabel={Normalised excitation frequency $f/f_{n,0}$},
+  ylabel={Response amplitude (normalised)},
+  domain=0.45:1.55, samples=300,
+  xmin=0.45, xmax=1.55, ymin=0, ymax=20,
+  legend pos=north east, legend style={font=\footnotesize, draw=none, fill=none},
+  tick label style={font=\footnotesize}, label style={font=\small},
+  grid=major, grid style={black!12}
+]
+\addplot[elsB2, very thick, smooth] {1/sqrt((1-x^2)^2 + (2*0.03*x)^2)};
+\addlegendentry{Healthy baseline}
+\addplot[elsC2, very thick, densely dashed, smooth] {1/sqrt((1-(x/0.85)^2)^2 + (2*0.05*(x/0.85))^2)};
+\addlegendentry{Reduced stiffness (damaged)}
+\draw[black!45, dashed] (axis cs:1,0) -- (axis cs:1,17);
+\draw[black!45, dashed] (axis cs:0.85,0) -- (axis cs:0.85,10.5);
+\node[font=\footnotesize, elsB2, anchor=south] at (axis cs:1.0,17) {$f_{n,0}$};
+\node[font=\footnotesize, elsC2, anchor=south] at (axis cs:0.85,10.5) {$f_{n,d}$};
+\end{axis}
+\end{tikzpicture}
+\caption{Schematic frequency-response curve of a single vibration mode under harmonic (rotating-unbalance) excitation. A loss of stiffness lowers the natural frequency from $f_{n,0}$ to $f_{n,d}$ and, with the increased energy dissipation typical of damage, lowers and broadens the resonance peak. The curves are illustrative and do not represent measured data.}
+\label{fig:frf}
+\end{figure}

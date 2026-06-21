@@ -1,0 +1,25 @@
+\begin{figure}[htbp]
+\centering
+\resizebox{\linewidth}{!}{%
+\begin{tikzpicture}[
+  every node/.style={font=\small\sffamily},
+  layer/.style={rectangle, rounded corners=3pt, draw=black!55, very thick,
+                text width=9.2cm, minimum height=1.15cm, align=center, inner sep=4pt},
+  flowup/.style={-{Stealth[length=3mm]}, very thick, elsB1},
+  flowdn/.style={-{Stealth[length=3mm]}, very thick, densely dashed, elsC2}
+]
+  \node[layer, fill=elsB4]                       (l1) {\textbf{Sensing layer}\\ strain gauges, triaxial accelerometers, temperature, displacement, inclinometers};
+  \node[layer, fill=elsB3, above=0.5cm of l1]    (l2) {\textbf{Data acquisition and signal conditioning}\\ synchronisation, filtering, thermal compensation, SVD/PCA compression};
+  \node[layer, fill=elsB3!70, above=0.5cm of l2] (l3) {\textbf{Physics-based digital-twin layer}\\ FEM baseline: static, modal, harmonic and transient analyses; model updating};
+  \node[layer, fill=elsC1!60, above=0.5cm of l3] (l4) {\textbf{Cognition layer}\\ feature extraction, novelty detection, classification, prognosis};
+  \node[layer, fill=elsC2!45, above=0.5cm of l4] (l5) {\textbf{Decision and reporting layer}\\ autonomous integrity assessment, alarms, maintenance triggers};
+  \draw[flowup] ($(l1.south west)+(-0.55,0.05)$) -- ($(l5.north west)+(-0.55,-0.05)$);
+  \node[rotate=90, anchor=south, font=\footnotesize\sffamily, elsB1]
+        at ($(l1.south west)!0.5!(l5.north west)+(-0.95,0)$) {data and features};
+  \draw[flowdn] ($(l5.north east)+(0.55,-0.05)$) -- ($(l1.south east)+(0.55,0.05)$);
+  \node[rotate=-90, anchor=south, font=\footnotesize\sffamily, elsC2]
+        at ($(l5.north east)!0.5!(l1.south east)+(0.95,0)$) {feedback and control};
+\end{tikzpicture}}
+\caption{Five-layer reference architecture of a Self-Aware Steel Structure. Sensor data are progressively transformed into an autonomous integrity assessment (left, bottom-up), while diagnosed conditions feed back to update the healthy baseline, the digital twin and the learning models (right, top-down).}
+\label{fig:arch}
+\end{figure}

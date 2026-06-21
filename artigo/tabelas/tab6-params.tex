@@ -1,0 +1,21 @@
+\begin{table}[htbp]
+\centering
+\caption{Experimental specification of the demonstrator. The quantities below define an auditable protocol; symbolic values are to be finalised with the as-built structure, and no value is measured yet.}
+\label{tab:params}
+\begin{tabularx}{\linewidth}{@{}l X l@{}}
+\toprule
+\textbf{Group} & \textbf{Parameter} & \textbf{Specification} \\
+\midrule
+Geometry        & SHS section $b\times t$; bay length; total height                                   & to be finalised \\
+Material         & Steel grade; Young's modulus $E$; density $\rho$                                    & to be finalised \\
+Connections      & Bolt grade and preload; pinned idealisation; joint rotational stiffness             & to be finalised \\
+Sensors          & Number and position of strain, acceleration, temperature, displacement, inclination & FE sensitivity analysis \\
+Acquisition      & Sampling rate $f_s$; anti-alias cut-off; window length                              & to be finalised \\
+Excitation       & Eccentric mass $m_e$; eccentricity $e$; rotation range $\Omega$                     & to be finalised \\
+Damage scenarios & Bracing stiffness-reduction levels; bolt-loosening torque levels                    & quantified \\
+FEM updating     & Updated parameters; objective function; algorithm                                   & to be finalised \\
+Alarm logic      & Deviation indicator; threshold; control-chart limits                                & to be finalised \\
+Data partition   & Grouping unit; external test set                                                    & by test/scenario/condition \\
+\bottomrule
+\end{tabularx}
+\end{table}

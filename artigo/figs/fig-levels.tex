@@ -1,0 +1,24 @@
+\begin{figure}[htbp]
+\centering
+\resizebox{\linewidth}{!}{%
+\begin{tikzpicture}[
+  every node/.style={font=\small\sffamily},
+  lvl/.style={rectangle, rounded corners=3pt, draw=black!55, very thick,
+               fill=elsB3!55, text width=2.5cm, minimum height=1.4cm, align=center, inner sep=3pt},
+  up/.style={-{Stealth[length=2.6mm]}, very thick, elsB1}
+]
+  \foreach \i/\lab/\cap in {0/L0/Passive, 1/L1/Sensing, 2/L2/Perception,
+                            3/L3/Interpretation, 4/L4/Prognosis, 5/L5/{Autonomous reporting}} {
+     \node[lvl] (n\i) at (\i*2.7, \i*0.95) {\textbf{\lab}\\[2pt]\footnotesize \cap};
+  }
+  \foreach \i [evaluate=\i as \j using int(\i+1)] in {0,1,2,3,4} {
+     \draw[up] (n\i) -- (n\j);
+  }
+  \draw[-{Stealth[length=3mm]}, thick, black!55]
+       ($(n0.south west)+(-0.5,-1.4)$) -- ($(n5.south east)+(0.3,-1.4)$)
+       node[midway, below, sloped, font=\footnotesize\sffamily, black!70]
+       {increasing structural self-awareness and autonomy};
+\end{tikzpicture}}
+\caption{The six levels of structural self-awareness, from a passive member (L0) to a structure that autonomously reports and acts upon its own state (L5). Each level presupposes the capabilities of those below it. The mapping to learning techniques and to the Rytter hierarchy is detailed in Table~\ref{tab:levels}.}
+\label{fig:levels}
+\end{figure}
