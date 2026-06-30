@@ -6,8 +6,8 @@
 \toprule
 \textbf{Method} & \textbf{Learning mode} & \textbf{Damage task (Rytter)} & \textbf{Level} \\
 \midrule
-SVD/PCA and DMD              & Feature extraction          & Substrate            & L2 \\
-Autoencoder                  & Unsupervised                & Existence, location  & L2--L3 \\
+SVD/PCA, DMD, autoencoder latents & Feature extraction     & Substrate            & L2 \\
+Autoencoder (reconstruction error) & Unsupervised          & Existence, location  & L3 \\
 Outlier analysis / SPRT      & Unsupervised                & Existence            & L3 \\
 Random Forest                & Supervised                  & Type, severity       & L3 \\
 Support Vector Machine       & Supervised                  & Type, severity       & L3 \\

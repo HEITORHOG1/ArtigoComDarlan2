@@ -1,5 +1,5 @@
 Self-Aware Steel Structure paradigm shifts members from passive to cognitive.
 Structural Cognition lets a structure interpret and report its own state.
 Five-layer architecture couples sensing, FEM digital twin and learning.
-Supervised and unsupervised AI detect stiffness loss and bolt loosening.
+Supervised and unsupervised AI target stiffness loss and bolt-loosening detection.
 SHS braced-frame testbed enables autonomous predictive maintenance of steel.

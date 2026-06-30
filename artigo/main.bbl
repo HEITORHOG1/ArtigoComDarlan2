@@ -146,6 +146,20 @@ F.~Parisi, A.~Mangini, M.~Fanti, J.~M. Adam, Automated location of steel truss
 \newblock \href {https://doi.org/10.1016/j.autcon.2022.104249}
   {\path{doi:10.1016/j.autcon.2022.104249}}.
 
+\bibitem{razi2013bolted}
+P.~Razi, R.~A. Esmaeel, F.~Taheri, Improvement of a vibration-based damage
+  detection approach for health monitoring of bolted flange joints in
+  pipelines, Structural Health Monitoring 12~(3) (2013) 207--224.
+\newblock \href {https://doi.org/10.1177/1475921713479641}
+  {\path{doi:10.1177/1475921713479641}}.
+
+\bibitem{chelimilla2023looseness}
+N.~Chelimilla, V.~Chinthapenta, N.~Kali, S.~Korla, Review on recent advances in
+  structural health monitoring paradigm for looseness detection in bolted
+  assemblies, Structural Health Monitoring 22~(6) (2023) 4264--4304.
+\newblock \href {https://doi.org/10.1177/14759217231158540}
+  {\path{doi:10.1177/14759217231158540}}.
+
 \bibitem{wangsu2023steelbearing}
 W.~Wang, C.~Su, Deep learning-based detection and condition classification of
   bridge steel bearings, Automation in Construction 156 (2023) 105085.
